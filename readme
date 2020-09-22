@@ -1,0 +1,54 @@
+Compilation:
+1.  Compile the Client.java file in the Client folder,
+    Compile the Server.java file in the Server folder,
+    Using the javac command.
+
+2.  Run the "java Server" and "java Client" commands from their respective dir (run server first).
+
+
+Use Cases:
+
+Sign in with userid:
+USER Hello
+
+Sign in using valid credentials:
+ACCT test1
+PASS test123
+
+Sign in using invalid credentials:
+ACCT test1
+PASS hellosir1
+
+Switch type:
+TYPE A   - valid
+TYPE B   - valid
+TYPE C   - valid
+TYPE GTE - invalid
+
+List directory:
+LIST F - lists current directory
+LIST F C:\Users\szymd\IdeaProjects\Compsys725\src\Server - list the given directory
+LIST V - lists current directory with more data
+LIST V C:\Users\szymd\IdeaProjects\Compsys725\src\Server - list the  given directory with more data
+
+Change the directory:
+CDIR C:\Users\szymd\IdeaProjects\Compsys725\src\Server
+ACCT test1
+PASS test123
+
+delete file:
+CDIR C:\Users\szymd\IdeaProjects\Compsys725\src\Server
+ACCT test1
+PASS test123
+Kill test1.txt
+
+rename file:
+CDIR C:\Users\szymd\IdeaProjects\Compsys725\src\Server
+ACCT test1
+PASS test123
+NAME test1.txt
+TOBE test2.txt
+
+close connection:
+DONE
+
